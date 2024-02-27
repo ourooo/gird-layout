@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukom Grid Layout</title>
+
+    <style>
+        body {
+            padding: 80px;
+            margin: 0;
+        }
+
+        #page {
+            display: grid;
+            width: 100%;
+            height: 800px;
+            grid-template:
+                [hl] "head head" 50px [hr]
+                [nl] "nav side" 100px [nr]
+                [al] "main side" [ar]
+                [ml] "main side" [mr]
+                [fl] "foot foot" 70px [fr]
+                / 1fr 600px;
+        }
+
+        header {
+            background-color: brown;
+            grid-area: head;
+            text-align: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        header img {
+            max-height: 40px;
+        }
+
+        nav {
+            background-color: rgb(59, 53, 53);
+            grid-area: nav;
+            text-align: center;
+            color: white;
+        }
+
+        aside {
+            background-color: rgb(120, 18, 255);
+            grid-area: side;
+            text-align: center;
+            color: white;
+        }
+
+        main {
+            background-color: rgb(0, 153, 255);
+            grid-area: main;
+            text-align: left;
+            color: white;
+            padding: 20px;
+        }
+
+        footer {
+            background-color: rgb(167, 13, 13);
+            grid-area: foot;
+            text-align: center;
+            color: white;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-nav {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .navbar-nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+        }
+
+        .navbar-nav li {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div class="nav">
+                <img src="logosmk1.png" alt="" height="50" width="50">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="color: white;">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showList1()" style="color: white;">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showList()" style="color: white;">LIST</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://id.wikipedia.org/wiki/Wikipedia:Tutorial" style="color: white;">TUTORIAL</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <nav></nav>
+        <aside>
+            <p>
+                < ?php
+if(isset($_POSTL])){
+$alas =$_POST['alas'];
+$tinggi =$_POST['tinggi'];
+$luas = $alas*$tinggi/2;
+echo "Luas Segitiga=".$luas;
+}
+?>
+            </p>
+        </aside>
+        <main id="mainContent">
+            <h1>Sejarah Coding</h1>
+            <p>Coding adalah proses mengubah ide atau instruksi menjadi bahasa yang bisa dipahami oleh komputer. Dalam istilah yang lebih sederhana, coding adalah menulis kode-kode yang berisi perintah-perintah untuk membuat program. Sejarah coding dimulai pada tahun 1801 ketika Joseph-Marie Jacquard menciptakan mesin tenun otomatis yang menggunakan kartu berlubang sebagai instruksi. Kemudian pada tahun 1837, Charles Babbage menciptakan mesin analitik pertama yang dapat diprogram menggunakan kartu berlubang. Seiring perkembangan teknologi, coding semakin menjadi penting dan digunakan dalam berbagai aplikasi software.</p>
+
+            <h2>Jenis-Jenis Coding</h2>
+            <p>Ada beberapa jenis coding yang biasa digunakan, yaitu front-end coding, back-end coding, dan full-stack coding. Front-end coding adalah coding yang berhubungan dengan tampilan dan interaksi pada website atau aplikasi. Sedangkan back-end coding adalah coding yang berhubungan dengan server dan database. Full-stack coding adalah gabungan dari front-end dan back-end coding, di mana seorang programmer bisa menguasai keduanya secara bersamaan.</p>
+        </main>
+        <footer>copyright 2024 by drg</footer>
+
+        <script>
+            function showList() {
+                document.getElementById("mainContent").innerHTML = "<h1>SMK INFORMATIKA KOTA SERANG</h1><p>SMK INFORMATIKA KOTA SERANG adalah sekolah kejuruan yang memiliki visi untuk mendidik siswa-siswi menjadi generasi BERMUTU (Bermartabat, Mandiri, Ukhuwah, Terdepan dan Unggul) dalam bidang ilmu agama, Bisnis, Manajemen, Komputer dan Teknologi Informasi. Pilihan tepat untuk putra-putri Bapak/Ibu menuntut ilmu di SMK Informatika Kota Serang, Jangan Asal Pilih Sekolah.. memiliki jurusan RPL, TKJ, OTKP, AKL, MM, dan memiliki fasilitas lengkap seperti: wifi 24jam, lab setiap jurusan, ac setiap kelas, dan gor tersendiri</p>";
+            }
+        </script>
+
+<script>
+    function showList1() {
+        document.getElementById("mainContent").innerHTML = "<h1>Profil Deni Rasya Gumilang</h1><p>Nama: Deni Rasya Gumilang</p><p>Tempat, Tanggal Lahir: Bandung, 26 Mei 2005</p><p>Hobi: Membaca buku dan bermain game</p><p>Instagram: @denirasya.g";
+    }
+</script>
+
+    </div>
+</body>
+</html>
